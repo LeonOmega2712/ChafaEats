@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ComidaCardComponent } from './comida-card/comida-card.component';
 
 @Component({
   selector: 'app-root',
