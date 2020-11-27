@@ -12,4 +12,5 @@ export class ComidaCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 }
