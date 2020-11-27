@@ -1,8 +1,17 @@
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="row">
+  <div class="col-sm-4" *ngFor="let card of platillosCatalogo">
+    <div class="card spacing" >
+      <img class="card-img-top" src="{{card.urlImg}}" alt="Card image cap">
+      <h5 class="card-header">{{card.titulo}}</h5>
+      <div class="card-body">
+        <p class="card-text">
+          {{card.descripcion}}
+        </p>
+        <p class="card-text font-weight-bold">
+          ${{card.precio}}
+        </p>
+      </div>
+      <a href="#" class="btn btn-primary btn-lg btn-block">Añadir al carrito</a>
+    </div>
   </div>
 </div>
