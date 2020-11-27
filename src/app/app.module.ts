@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ComidaCardComponent } from './comida-card/comida-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ComidaCardComponent
   ],
   imports: [
     BrowserModule,
