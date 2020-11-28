@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { ComidaCardComponent } from './comida-card/comida-card.component';
 import { ComidaCarousselComponent } from './comida-caroussel/comida-caroussel.component';
 import { FooterComponent } from './footer/footer.component';
+import { NgxsModule } from "@ngxs/store";
+import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
+import { MeseroState, LetreroState } from "../model/mesero.redux";
+import { LetreroService, MeseroService } from "../service/mesero.service";
 
 @NgModule({
   declarations: [
@@ -16,9 +20,13 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxsModule.forRoot([MeseroState, LetreroState], {
+      developmentMode: true
+    }),
+    NgxsReduxDevtoolsPluginModule.forRoot()
   ],
-  providers: [],
+  providers: [LetreroService, MeseroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
